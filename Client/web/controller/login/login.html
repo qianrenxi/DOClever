@@ -35,13 +35,17 @@
                                         <el-button type="warning" style="width: 100%" @click.prevent="login" :loading="loginPending" id="login">登录</el-button>
                                     </el-form-item>
                                     <el-form-item >
+                                        <el-checkbox class="fl" v-model="remember" :true-label="1" :false-label="0">记住我</el-checkbox>
+                                        <a href="../reset/reset.html" class="fr" >忘记密码？</a>
+                                    </el-form-item>
+                                    <!-- <el-form-item >
                                          <el-checkbox class="fl" v-model="remember" :true-label="1" :false-label="0">记住我</el-checkbox>
                                          <img @click="qqLogin()"  target="_blank" class="fr" style="padding-top: 5px;cursor: pointer" id="qqLoginBtn" src="../../resource/pic/qq.png"> </a>
                                     </el-form-item >
                                     <el-form-item >
                                         <a href="../reset/reset.html" class="fl" >忘记密码？</a>
                                         <a href="../register/register.html" class="fr">没有账号？立即注册</a>
-                                    </el-form-item >
+                                    </el-form-item > -->
                                 </el-form>
                             </el-col>
                         </el-row>

@@ -22,7 +22,7 @@
         <el-col :span="5" class="login" :xs="4">
             <template v-if="!session.id">
                 <el-button type="text" onclick="location='../login/login.html'">登录</el-button>
-                <el-button type="text" class="free logovisiable loginvisable" onclick="location='../register/register.html'" >免费体验</el-button>
+                <!-- <el-button type="text" class="free logovisiable loginvisable" onclick="location='../register/register.html'" >免费体验</el-button> -->
             </template>
             <template v-else>
                 <el-row class="row">
