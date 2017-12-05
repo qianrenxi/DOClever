@@ -74,9 +74,9 @@
         <el-col class="col" :span="2" style="text-align: center;line-height: 50px" v-if="!session.id && !adminPage">
             <el-button type="info" onclick="location='/html/web/login/login.html'">登录</el-button>
         </el-col>
-        <el-col class="col" :span="2" style="text-align: center;line-height: 50px" v-if="!session.id && !adminPage">
+        <!-- <el-col class="col" :span="2" style="text-align: center;line-height: 50px" v-if="!session.id && !adminPage">
             <el-button type="success"  onclick="location='/html/web/register/register.html'">注册</el-button>
-        </el-col>
+        </el-col> -->
         <el-dialog title="团队申请" v-model="showTeam" size="small" ref="team">
             <el-form ref="form" label-width="100px">
                 <el-form-item label="团队ID">
