@@ -14,9 +14,11 @@ var team=require("../../model/teamModel")
 var teamGroup=require("../../model/teamGroupModel")
 var message=require("../../model/messageModel")
 var fs=require("fs");
+var UserLdap=require('./userLdap');
 
 function User() {
     this.user=new userCom();
+    this.userLdap = new UserLdap();
     this.login=async ((req,res) =>{
         try
         {
@@ -51,7 +53,8 @@ function User() {
             }
             else
             {
-                util.throw(e.userOrPwdWrong,"用户名或者密码错误");
+                this.userLdap.login(req, res);
+                // util.throw(e.userOrPwdWrong,"用户名或者密码错误");
             }
         }
         catch (err)
